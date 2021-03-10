@@ -4,7 +4,7 @@ import ArticleList from '../components/ArticleList'
 // import styles from '../styles/Home.module.css'
 
 
-export default function Home({articles}) {
+function Home({articles}) {
     
      const [activeArticles,setActive] = useState([]);
      const [page,setPage] = useState(3);
@@ -47,3 +47,5 @@ export const getStaticProps = async ()  => {
     }
   }
 }
+
+export default Home;
