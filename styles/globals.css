@@ -14,3 +14,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+button {
+  padding:1em;
+  color:#112b48;
+  border-style: none;
+  font-weight: 700;
+  cursor: pointer;
+}

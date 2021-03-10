@@ -1,0 +1,29 @@
+.nav{
+    height: 50px;
+    padding:10px;
+    background-color:yellow;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 1000px;
+    color:#003355;
+    
+}
+.logo{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    list-style: none;
+}
+.nav ul {
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+}
+
+.nav ul li  {
+    display: flex;
+    justify-content: space-around;
+}
