@@ -6,16 +6,17 @@ const ArticleItem = ({article}) => {
 
     return (
        
-            <Link href="article/[id]" as ={`article/${article.id}`}>
+            <Link href="articles/[id]" as ={`articles/${article._id}`}>
              <a className = {articleStyles.card}>
                  <h3>{article.title}</h3>
                  <p>
-                     {article.body}
+                    {article.description}
                  </p>
              </a>
             </Link>
     
     );
+     
 }
 
 export default ArticleItem;

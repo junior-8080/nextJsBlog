@@ -1,0 +1,44 @@
+.page {
+    height: 100vh;
+}
+
+.sideBar {
+    height: 100%;
+    width: 200px;
+}
+.newPost {
+    color:#000;
+ }
+
+.postDetails{
+    height: 45vh;
+}
+.accountDetails{
+    /* height: 45vh; */
+    background-color: #fff;
+    border-radius: 1em;
+    padding:.5em;
+}
+.adminRigth {
+    background-color: rgb(237, 216, 188);
+    padding:1em
+  
+}
+.stepsContent{
+    margin-top: 1em;
+}
+.helper{
+    font-size: small;
+    color: grey;
+}
+.signin {
+    background-color:rgb(247, 186, 105) ;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: justify
+}
+.details{
+    padding:1em;
+    background-color: green;
+}

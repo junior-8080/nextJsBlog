@@ -50,3 +50,6 @@
     }
   }
   
+  .articleHead {
+    text-transform: uppercase;
+  }
