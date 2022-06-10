@@ -1,22 +1,15 @@
-import Link from 'next/link';
-import articleStyles from '../styles/Article.module.css'
+import Link from "next/link";
+import articleStyles from "../styles/Article.module.css";
 
-const ArticleItem = ({article}) => {
-    
-
-    return (
-       
-            <Link href="articles/[id]" as ={`articles/${article._id}`}>
-             <a className = {articleStyles.card}>
-                 <h3>{article.title}</h3>
-                 <p>
-                    {article.description}
-                 </p>
-             </a>
-            </Link>
-    
-    );
-     
-}
+const ArticleItem = ({ article }) => {
+  return (
+    <Link href="articles/[id]" as={`articles/${article._id}`}>
+      <span className={articleStyles.card}>
+        <h2>{article.title}</h2>
+        <p>{article.description}{". "}➡️</p>
+      </span>
+    </Link>
+  );
+};
 
 export default ArticleItem;
