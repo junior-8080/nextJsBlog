@@ -4,10 +4,10 @@ import articleStyles from "../styles/Article.module.css";
 const ArticleItem = ({ article }) => {
   return (
     <Link href="articles/[id]" as={`articles/${article._id}`}>
-      <span className={articleStyles.card}>
+      <div className={articleStyles.card}>
         <h2>{article.title}</h2>
         <p>{article.description}{". "}➡️</p>
-      </span>
+      </div>
     </Link>
   );
 };

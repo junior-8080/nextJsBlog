@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,400;1,300&display=swap');
 .title a , .title span {
-    color: #fff;
+    color: #57a738;
     text-decoration: none;
     font-family: 'Lobster', cursive;
   }
@@ -21,12 +21,14 @@
   .title,
   .description {
     text-align: center;
+    font-family: 'Lobster', cursive;
+
   }
   
   .description {
     line-height: 1.5;
     font-size: 1.2rem;
-    color:#57a738;
+    
   }
   .span {
       color: #3C841F;

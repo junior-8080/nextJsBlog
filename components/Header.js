@@ -11,7 +11,7 @@ const Header = () => {
         Development{" "}🧑🏽‍💻
       </h1>
       <p className={headerStyles.description}>
-        Discussing New Programming and DevOps Topics.
+        Discussing TECH Related Topics And TECH Updates..
       </p>
     </div>
   );
