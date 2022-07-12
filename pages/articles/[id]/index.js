@@ -3,6 +3,7 @@ import DOMPurify from "dompurify";
 import Layout from "../../../components/Layout";
 import Header from "../../../components/Header";
 import articleStyles from "../../../styles/Article.module.css";
+import axios from "axios";
 
 const index = ({ article }) => {
   const createMarkup = (html) => {
@@ -24,18 +25,16 @@ const index = ({ article }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}/posts/${context.params.id}`
+  console.log(context)
+  const response = await axios(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts/${context.params.id}`
   );
-  const result = await res.json();
-  const article = result.data;
-  if (result.statusCode === 200 && result.message === "SUCCESS") {
-    return {
-      props: {
-        article,
-      },
-    };
-  }
+
+  const article = response.data.data;
+  return {
+    props: {
+      article,
+    },
+  };
 };
 
 export default index;

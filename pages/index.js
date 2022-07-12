@@ -3,7 +3,7 @@ import Head from "next/head";
 import ArticleList from "../components/ArticleList";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
-
+import axios from "axios"
 function Home({ articles }) {
   const [activeArticles, setActive] = useState([]);
   const [page, setPage] = useState(3);
@@ -47,7 +47,7 @@ function Home({ articles }) {
 
 export const getStaticProps = async () => {
   const response = await axios(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts`);
-  const articles = response.data;
+  const articles = response.data.data;
 
   return {
     props: {
