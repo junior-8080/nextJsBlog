@@ -46,8 +46,7 @@ function Home({ articles }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts`);
-  const response = await res.json();
+  const response = await axios(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts`);
   const articles = response.data;
 
   return {
