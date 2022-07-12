@@ -46,14 +46,20 @@ function Home({ articles }) {
 }
 
 export const getStaticProps = async () => {
-  const response = await axios(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts`);
-  const articles = response.data.data;
+  try {
+    const response = await axios(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts`);
+    const articles = response.data.data;
+    return {
+      props: {
+        articles,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+  }
+ 
 
-  return {
-    props: {
-      articles,
-    },
-  };
+  
 };
 
 export default Home;

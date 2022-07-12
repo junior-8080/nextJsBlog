@@ -25,16 +25,19 @@ const index = ({ article }) => {
 };
 
 export const getServerSideProps = async (context) => {
-  console.log(context)
-  const response = await axios(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts/${context.params.id}`
-  );
+  try {
+    const response = await axios(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts/${context.params.id}`);
 
-  const article = response.data.data;
-  return {
-    props: {
-      article,
-    },
-  };
+    const article = response.data.data;
+    return {
+      props: {
+        article,
+      },
+    };
+  } catch (error) {
+      console.log(error)
+  }
+
 };
 
 export default index;
