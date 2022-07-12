@@ -3,7 +3,6 @@ import Head from "next/head";
 import ArticleList from "../components/ArticleList";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
-// import styles from '../styles/Home.module.css'
 
 function Home({ articles }) {
   const [activeArticles, setActive] = useState([]);
@@ -24,6 +23,7 @@ function Home({ articles }) {
         <Head>
           <title>JavaScript News</title>
           <meta name="keyword" content="web development, programming"></meta>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         </Head>
         <Header />
         <ArticleList articles={activeArticles} />
