@@ -48,6 +48,7 @@ function Home({ articles }) {
 export const getStaticProps = async () => {
   try {
     const response = await axios(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts`);
+    console.log(response.data)
     const articles = response.data.data;
     return {
       props: {
