@@ -9,12 +9,12 @@ function Home({ articles }) {
   const [page, setPage] = useState(3);
   const handleClick = () => {
     if (activeArticles.length !== articles) {
-      setActive(articles.slice(0, page + 3));
+      setActive(articles.slice(0, page + 10));
     }
-    setPage(page + 3);
+    setPage(page + 10);
   };
   useEffect(() => {
-    setActive(articles.slice(0, 3));
+    setActive(articles.slice(0, 10));
   }, []);
 
   return (
@@ -31,11 +31,11 @@ function Home({ articles }) {
           style={{
             display: "flex",
             justifyContent: "center",
-            marginTop: "5em",
+            marginTop: "1em",
           }}
         >
           {activeArticles.length < articles.length ? (
-            <button onClick={handleClick}>Load More</button>
+            <button onClick={handleClick} style={{fontSize:"13px"}}>Load More</button>
           ) : (
             ""
           )}
@@ -48,7 +48,6 @@ function Home({ articles }) {
 export const getStaticProps = async () => {
   try {
     const response = await axios(`${process.env.NEXT_PUBLIC_API_BASE_URL}/posts`);
-    console.log(response.data)
     const articles = response.data.data;
     return {
       props: {
@@ -56,7 +55,13 @@ export const getStaticProps = async () => {
       },
     };
   } catch (error) {
-    console.log(error);
+    const articles = [];
+    return {
+      props: {
+        articles,
+      },
+    };
+
   }
  
 

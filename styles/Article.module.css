@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap");
 
 .grid {
+  max-width: 1000px;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  justify-content: center;
+  align-items: center;
   margin-top: 3rem;
 }
 
 .card {
+  width:30%;
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -42,12 +43,16 @@
 .logo {
   height: 1em;
 }
-
+.title {
+  word-wrap: break-word;
+}
 
 .articleHead {
   text-transform: uppercase;
   font-size: 38px;
-  text-align:center
+  text-align:center;
+  word-wrap: break-word;
+
 }
 
 .articleBody {
@@ -60,10 +65,18 @@
 }
 
 .social {
-  display:'flex';
-  justify-context: space-between
+  display:flex;
+  justify-content: space-between
+}
+.description{
+  word-wrap: break-word;
 }
 
+.author{
+  /* padding:0px;
+  margin: 0px; */
+  font-size: 14px !important;
+}
 
 @media (max-width: 600px) {
   .grid {
